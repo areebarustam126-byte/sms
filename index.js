@@ -1,100 +1,15 @@
-'use strict';
-
-// selected so (BASE - 1) * 0x100000000 + 0xffffffff is a safe integer
-var BASE = 1000000;
-
-function readInt8(buffer) {
-	var high = buffer.readInt32BE(0);
-	var low = buffer.readUInt32BE(4);
-	var sign = '';
-
-	if (high < 0) {
-		high = ~high + (low === 0);
-		low = (~low + 1) >>> 0;
-		sign = '-';
-	}
-
-	var result = '';
-	var carry;
-	var t;
-	var digits;
-	var pad;
-	var l;
-	var i;
-
-	{
-		carry = high % BASE;
-		high = high / BASE >>> 0;
-
-		t = 0x100000000 * carry + low;
-		low = t / BASE >>> 0;
-		digits = '' + (t - BASE * low);
-
-		if (low === 0 && high === 0) {
-			return sign + digits + result;
-		}
-
-		pad = '';
-		l = 6 - digits.length;
-
-		for (i = 0; i < l; i++) {
-			pad += '0';
-		}
-
-		result = pad + digits + result;
-	}
-
-	{
-		carry = high % BASE;
-		high = high / BASE >>> 0;
-
-		t = 0x100000000 * carry + low;
-		low = t / BASE >>> 0;
-		digits = '' + (t - BASE * low);
-
-		if (low === 0 && high === 0) {
-			return sign + digits + result;
-		}
-
-		pad = '';
-		l = 6 - digits.length;
-
-		for (i = 0; i < l; i++) {
-			pad += '0';
-		}
-
-		result = pad + digits + result;
-	}
-
-	{
-		carry = high % BASE;
-		high = high / BASE >>> 0;
-
-		t = 0x100000000 * carry + low;
-		low = t / BASE >>> 0;
-		digits = '' + (t - BASE * low);
-
-		if (low === 0 && high === 0) {
-			return sign + digits + result;
-		}
-
-		pad = '';
-		l = 6 - digits.length;
-
-		for (i = 0; i < l; i++) {
-			pad += '0';
-		}
-
-		result = pad + digits + result;
-	}
-
-	{
-		carry = high % BASE;
-		t = 0x100000000 * carry + low;
-		digits = '' + t % BASE;
-
-		return sign + digits + result;
-	}
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatabaseError = exports.serialize = void 0;
+exports.parse = parse;
+const messages_1 = require("./messages");
+Object.defineProperty(exports, "DatabaseError", { enumerable: true, get: function () { return messages_1.DatabaseError; } });
+const serializer_1 = require("./serializer");
+Object.defineProperty(exports, "serialize", { enumerable: true, get: function () { return serializer_1.serialize; } });
+const parser_1 = require("./parser");
+function parse(stream, callback) {
+    const parser = new parser_1.Parser();
+    stream.on('data', (buffer) => parser.parse(buffer, callback));
+    return new Promise((resolve) => stream.on('end', () => resolve()));
 }
-
-module.exports = readInt8;
+//# sourceMappingURL=index.js.map
