@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "firstName": "Ayesha",
+    "lastName": "Khan",
+    "email": "ayesha.khan@northwood.edu",
+    "studentId": "STU-1023",
+    "semester": "Semester 6",
+    "program": "Computer Science",
+    "status": "Active",
+    "color": "lavender",
+    "joined": "2026-10-28"
+  },
+  {
+    "id": "2",
+    "firstName": "Muhammad",
+    "lastName": "Ali",
+    "email": "muhammad.ali@northwood.edu",
+    "studentId": "STU-1024",
+    "semester": "Semester 4",
+    "program": "Business Administration",
+    "status": "Active",
+    "color": "blue",
+    "joined": "2026-10-27"
+  },
+  {
+    "id": "3",
+    "firstName": "Sara",
+    "lastName": "Ahmed",
+    "email": "sara.ahmed@northwood.edu",
+    "studentId": "STU-1025",
+    "semester": "Semester 3",
+    "program": "Psychology",
+    "status": "Active",
+    "color": "peach",
+    "joined": "2026-10-26"
+  },
+  {
+    "id": "4",
+    "firstName": "Hamza",
+    "lastName": "Tariq",
+    "email": "hamza.tariq@northwood.edu",
+    "studentId": "STU-1026",
+    "semester": "Semester 5",
+    "program": "Electrical Engineering",
+    "status": "Active",
+    "color": "green",
+    "joined": "2026-10-25"
+  },
+  {
+    "id": "5",
+    "firstName": "Zainab",
+    "lastName": "Malik",
+    "email": "zainab.malik@northwood.edu",
+    "studentId": "STU-1027",
+    "semester": "Semester 2",
+    "program": "Biological Sciences",
+    "status": "Active",
+    "color": "pink",
+    "joined": "2026-10-24"
+  },
+  {
+    "id": "6",
+    "firstName": "Hassan",
+    "lastName": "Raza",
+    "email": "hassan.raza@northwood.edu",
+    "studentId": "STU-1028",
+    "semester": "Semester 7",
+    "program": "Mathematics",
+    "status": "Active",
+    "color": "yellow",
+    "joined": "2026-10-23"
+  },
+  {
+    "id": "7",
+    "firstName": "Noor",
+    "lastName": "Fatima",
+    "email": "noor.fatima@northwood.edu",
+    "studentId": "STU-1029",
+    "semester": "Semester 1",
+    "program": "English Literature",
+    "status": "Pending",
+    "color": "mint",
+    "joined": "2026-10-22"
+  },
+  {
+    "id": "8",
+    "firstName": "Usman",
+    "lastName": "Shah",
+    "email": "usman.shah@northwood.edu",
+    "studentId": "STU-1030",
+    "semester": "Semester 8",
+    "program": "Physics",
+    "status": "Active",
+    "color": "lavender",
+    "joined": "2026-10-21"
+  }
+]

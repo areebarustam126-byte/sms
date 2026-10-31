@@ -1,0 +1,9 @@
+data/students.json
+data/*.tmp
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+.env
+.env.*
+!.env.example
+.vercel
